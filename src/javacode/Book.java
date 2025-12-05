@@ -19,12 +19,12 @@ public class Book {
         this.pages = pages;
     }
 
-    public String isBig() {
-        return this.pages > 500 ? "Да" : "Нет";
+    public boolean isBig() {
+        return this.pages > 500;
     }
 
-    public String matches(String word) {
-        return title.contains(word) || this.author.name.contains(word) || this.author.surname.contains(word) ? "Да" : "Нет";
+    public boolean matches(String word) {
+        return title.contains(word) || this.author.name.contains(word) || this.author.surname.contains(word);
     }
 
     public int estimatePrice() {
